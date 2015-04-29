@@ -1,0 +1,20 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: print from playbook
+      debug: msg="in playbooks/playbook.yml"
+
+    - name: easy install pip
+      easy_install: name=pip
+      sudo: yes
+
+    - name: install apps from pip
+      pip: name={{item}}
+      sudo: yes
+      with_items:
+          - virtualenv
+          - virtualenvwrapper
+          - cliff
+          - pyyaml
+          - awscli

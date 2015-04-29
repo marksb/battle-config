@@ -1,0 +1,5 @@
+sources:
+  git:
+  - name: 'osx'
+    playbooks: [playbooks/playbook.yml, playbooks/homebrew.yml, playbooks/casks.yml]
+    repo: 'https://github.com/marksb/battle-config'

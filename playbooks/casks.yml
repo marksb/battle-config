@@ -1,0 +1,30 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: print from playbook
+      debug: msg="in playbooks/casks.yml playbook"
+
+    - name: Install cask for homebrew
+      homebrew: name=brew-cask state=present update_homebrew=yes
+
+    - name: Install Casks from homebrew cask
+      homebrew_cask: name={{item}}
+      with_items:
+        - appcleaner
+        - alfred
+        - caffeine
+        - cyberduck
+        - dash
+        - dropbox
+        - flux
+        - gitx
+        - google-chrome
+        - intellij-idea-ce
+        - istat-menus
+        - macvim
+        - onepassword
+        - skype
+        - slack
+        - virtualbox
+        - vlc
