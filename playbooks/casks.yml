@@ -8,7 +8,8 @@
     - name: Install cask for homebrew
       homebrew: name=brew-cask state=present update_homebrew=yes
 
-    - name: Install Casks from homebrew cask
+    - name: Install casks from homebrew cask
+      homebrew_cask_appdir: /Applications
       homebrew_cask: name={{item}}
       with_items:
         - appcleaner
@@ -28,3 +29,4 @@
         - slack
         - virtualbox
         - vlc
+        - ynab
