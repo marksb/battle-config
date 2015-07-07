@@ -9,7 +9,8 @@
       homebrew: name=brew-cask state=present update_homebrew=yes
 
     - name: Install casks from homebrew cask
-      homebrew_cask_appdir: /Applications
+      environment:
+        HOMEBREW_CASK_OPTS: --appdir=/Applications
       homebrew_cask: name={{item}}
       with_items:
         - appcleaner
