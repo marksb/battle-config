@@ -20,7 +20,6 @@
           - git
           - heroku-toolbelt
           - imagemagick
-          - jpeg
           - maven
           - openssl
           - postgresql
